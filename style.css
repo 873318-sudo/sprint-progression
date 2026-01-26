@@ -1,3 +1,4 @@
+/* preset */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -5,6 +6,7 @@
     font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
+/* main colors */
 body {
     background-color: #fafafb;
     color: #4f457f;
@@ -12,29 +14,67 @@ body {
 
 .hero {
     min-height: 100vh;
+    position: relative;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    align-items: flex-start;
+    justify-content: flex-start;
     padding: 6rem 8rem;
     gap: 4rem;
 }
 
 .hero-content {
-    max-width: 520px;
+    max-width: 32.5rem;
 }
 
+/* graphic background elements */
+.hero-content, .hero-visual {
+    position: relative;
+    z-index: 1;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: repeating-linear-gradient(
+        to right,
+        rgba(79, 69, 127, 0.06),
+        rgba(79, 69, 127, 0.06) 1px,
+        transparent 1px,
+        transparent 6rem
+    );
+    pointer-events: none;
+    z-index: 0;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: repeating-linear-gradient(
+        to bottom,
+        rgba(79, 69, 127, 0.05),
+        rgba(79, 69, 127, 0.05) 1px,
+        transparent 1px,
+        transparent 5rem
+    );
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* text properties */
 .hero-content h1 {
     font-size: 4rem;
     font-weight: 800;
     line-height: 1.05;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
 }
 
 .hero-content h2 {
     font-size: 1.4rem;
     font-weight: 4000;
-    color: #6c757d;
-    margin-bottom: 2rem;
+    color: #454b50;
+    margin-bottom: 1.5rem;
 }
 
 .hero-content p {
@@ -43,26 +83,103 @@ body {
     color: #1a1a1a;
 }
 
-.hero-visual img {
-    width: 420px;
-    height: 420px;
-    object-fit: cover;
-    border-radius: 8px;
+/* image properties */
+.hero-visual.first {
+  position: relative;
+  top: 1rem;
+  width: 26.25rem;
+  height: 26.25rem;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  box-shadow:
+    0 2.5rem 5rem rgba(0, 0, 0, 0.22),
+    0 0.75rem 1.25rem rgba(0, 0, 0, 0.14);
+  opacity: 0;
+  transform: translateY(3rem);
+  transition:
+    opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.hero-visual.second {
+  position: relative;
+  top: 31.5rem;
+  width: 26.25rem;
+  height: 26.25rem;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  box-shadow:
+    0 2.5rem 5rem rgba(0, 0, 0, 0.22),
+    0 0.75rem 1.25rem rgba(0, 0, 0, 0.14);
+  opacity: 0;
+  transform: translateY(3rem);
+  transition:
+    opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.hero-visual.first.active,
+.hero-visual.second.active {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* transition effect */
-.hero-content, .hero-visual {
+.line {
+    display: block;
     opacity: 0;
-    transform: translateY(50px);
-    transition: all 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+    transform: translateY(1.25rem);
+    transition:
+        opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+        transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.hero-content.active, .hero-visual.active {
+/* mimic double space */
+.line.paragraph {
+    margin-bottom: 1.5rem;
+}
+
+.line.active {
     opacity: 1;
     transform: translateY(0);
 }
 
+.hero-visual img {
+    opacity: 0;
+    transform: translateY(3rem);
+    transition: all 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
 
-.hero-visual.active {
-    transition-delay: 0.2s;
+.hero-visual img.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* cta button on the title page */
+.cta-button {
+  display: inline-block;
+  margin-top: -2rem;
+  margin-bottom: 7rem;
+  padding: 0.9rem 1.6rem;
+
+  background-color: #7640a0;
+  color: #fff;
+  text-decoration: none;
+
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+
+  border-radius: 0.4rem;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    background-color 0.25s ease;
+}
+
+/* add a shadow when hovering over the button */
+.cta-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.25);
+  background-color: #7640a0;
 }
