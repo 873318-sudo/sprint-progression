@@ -125,7 +125,7 @@ body {
 .progression-content .line.paragraph {
     font-size: 1rem;
     line-height: 2 !important;
-    margin-bottom: 1lh;
+    margin-bottom: 1lh !important;
     color: #1a1a1a;
     font-weight: 400;
 }
