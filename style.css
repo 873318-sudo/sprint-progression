@@ -187,141 +187,119 @@ body {
 
 /* ============================ PROGRESSION PAGES ============================ */
 .progression-layout {
-  display: flex;
+ display: flex;
 }
 
 /* the rail */
 .progression-rail {
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100vh;
-  width: 4rem;
+ position: fixed;
+ top: 0;
+ left: 0;
+ height: 100vh;
+ width: 3.5rem;
 
-
-  background: linear-gradient(
-    to bottom,
-    rgb(199, 170, 232),
-    rgb(121, 67, 229)
-  );
-
-  backdrop-filter: blur(10px);
-  padding-top: 6rem;
-
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1.25rem;
-
-
-  transition: width 0.35s ease;
-  z-index: 10;
+ background: linear-gradient(
+   to bottom,
+   rgb(199, 170, 232),
+   rgb(121, 67, 229)
+ );
+ backdrop-filter: blur(10px);
+ padding-top: 6rem;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ gap: 1.25rem;
+ transition: width 0.35s ease;
+ z-index: 10;
 }
-
 
 /* expand on hover */
 .progression-rail:hover {
-  width: 11rem;
+ width: 11rem;
 }
-
 
 /* buttons */
 .rail-btn {
-  width: 8rem;
-  text-align: center;
-
-
-  padding: 0.6rem 0.8rem;
-  border-radius: 0.4rem;
-
-
-  text-decoration: none;
-  font-size: 0.9rem;
-  font-weight: 600;
-
-
-  color: rgba(255, 255, 255, 0.85);
-  background: rgba(255, 255, 255, 0.12);
-
-
-  opacity: 0;
-  transform: translateX(-0.5rem);
-
-
-  transition:
-    opacity 0.25s ease,
-    transform 0.25s ease,
-    background-color 0.2s ease;
+ width: 8rem;
+ text-align: center;
+ padding: 0.6rem 0.8rem;
+ border-radius: 0.4rem;
+ text-decoration: none;
+ font-size: 0.9rem;
+ font-weight: 600;
+ color: rgba(255, 255, 255, 0.85);
+ background: rgba(255, 255, 255, 0.12);
+ opacity: 0;
+ transform: translateX(-0.5rem);
+ transition:
+   opacity 0.25s ease,
+   transform 0.25s ease,
+   background-color 0.2s ease;
 }
-
 
 /* reveal buttons on hover */
 .progression-rail:hover .rail-btn {
-  opacity: 1;
-  transform: translateX(0);
+ opacity: 1;
+ transform: translateX(0);
 }
-
 
 /* hover effect */
 .rail-btn:hover {
-  background: rgba(255, 255, 255, 0.22);
+ background: rgba(255, 255, 255, 0.22);
 }
-
 
 /* active phase */
 .rail-btn.active {
-  background: rgba(255, 255, 255, 0.35);
-  color: #fff;
+ background: rgba(255, 255, 255, 0.35);
+ color: #fff;
 }
-
 
 /* main content offset */
 .progression-content {
-  margin-left: 3.5rem;
-  padding: 4rem 6rem;
-  max-width: 56rem;
+ margin-left: 3.5rem;
+ padding: 4rem 6rem;
+ max-width: 56rem;
 }
 
 /* subtle background lines for progression pages */
 .progression-content::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-image: repeating-linear-gradient(
-    to right,
-    rgba(79, 69, 127, 0.06),
-    rgba(79, 69, 127, 0.06) 1px,
-    transparent 1px,
-    transparent 6rem
-  );
-  pointer-events: none;
-  z-index: 0;
+ content: "";
+ position: absolute;
+ inset: 0;
+ background-image: repeating-linear-gradient(
+   to right,
+   rgba(79, 69, 127, 0.06),
+   rgba(79, 69, 127, 0.06) 1px,
+   transparent 1px,
+   transparent 6rem
+ );
+ pointer-events: none;
+ z-index: 0;
 }
 
 .progression-content::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-image: repeating-linear-gradient(
-    to bottom,
-    rgba(79, 69, 127, 0.05),
-    rgba(79, 69, 127, 0.05) 1px,
-    transparent 1px,
-    transparent 5rem
-  );
-  pointer-events: none;
-  z-index: 0;
+ content: "";
+ position: absolute;
+ inset: 0;
+ background-image: repeating-linear-gradient(
+   to bottom,
+   rgba(79, 69, 127, 0.05),
+   rgba(79, 69, 127, 0.05) 1px,
+   transparent 1px,
+   transparent 5rem
+ );
+ pointer-events: none;
+ z-index: 0;
 }
 
 /* make sure content is above the lines */
 .progression-content {
-  position: relative;
-  z-index: 1;
+ position: relative;
+ z-index: 1;
 }
 
 /* double spacing */
 .progression-content p {
-    line-height: 1.6;
-    margin-bottom: 1.5rem;
+   line-height: 1.6;
+   margin-bottom: 1.5rem;
 }

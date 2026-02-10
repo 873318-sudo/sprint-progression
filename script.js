@@ -1,7 +1,6 @@
 const hero = document.querySelector('.hero');
 const heroImage = document.querySelector('.hero-image');
 
-
 // split headings
 // H1 (split by <br>)
 document.querySelectorAll('.split-heading').forEach(h1 => {
@@ -11,12 +10,10 @@ document.querySelectorAll('.split-heading').forEach(h1 => {
    .join('');
 });
 
-
 // H2 (single line)
 document.querySelectorAll('.split-subheading').forEach(h2 => {
  h2.innerHTML = `<span class="line">${h2.textContent}</span>`;
 });
-
 
 // split paragraph
 document.querySelectorAll('.hero-content p').forEach(p => {
@@ -26,11 +23,8 @@ document.querySelectorAll('.hero-content p').forEach(p => {
    .join('')
 });
 
-
 // observer
 const lines = hero.querySelectorAll('.line');
-
-
 const heroObserver = new IntersectionObserver((entries, observer) => {
  entries.forEach(entry => {
    if (entry.isIntersecting) {
@@ -59,6 +53,5 @@ const heroObserver = new IntersectionObserver((entries, observer) => {
    }
  });
 }, { threshold: 0.2 });
-
 
 heroObserver.observe(hero);
