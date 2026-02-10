@@ -357,12 +357,9 @@ sup { font-size: 0.72em; vertical-align: super; line-height: 0; }
 
 .abs-img {
   position: absolute;
-  top: var(--top, 6rem);
-  left: var(--left, 50%);
-  right: var(--right, auto);
   transform: translateX(-50%);
-  width: var(--w, 26.25rem);
-  height: auto;
+  width: 10rem;
+  height: 10rem;
   max-width: 80%;
   object-fit: cover;
   border-radius: 0.5rem;
@@ -397,5 +394,5 @@ sup { font-size: 0.72em; vertical-align: super; line-height: 0; }
 @media (max-width: 900px) {
   .progression-rail { display: none; }
   .progression-content { margin-left: 0; padding: 2.25rem; }
-  .abs-img { position: relative; top: auto; left: auto; transform: none; width: 100%; margin: 1.25rem 0; }
+  .abs-img { position: absolute; top: auto; left: auto; transform: none; width: 100%; margin: 1.25rem 0; }
 }
