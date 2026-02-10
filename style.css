@@ -73,7 +73,7 @@ body {
 
 .hero-content h2 {
     font-size: 1.4rem;
-    font-weight: 4000;
+    font-weight: 700;
     color: #454b50;
     margin-bottom: 1.5rem;
 }
@@ -185,7 +185,7 @@ body {
   background-color: #7640a0;
 }
 
-/* ============================ PROGRESSION RAIL (DESIGNED) ============================ */
+/* ============================ PROGRESSION PAGES ============================ */
 .progression-layout {
   display: flex;
 }
@@ -196,7 +196,7 @@ body {
   top: 0;
   left: 0;
   height: 100vh;
-  width: 3.5rem;
+  width: 4rem;
 
 
   background: linear-gradient(
@@ -318,4 +318,10 @@ body {
 .progression-content {
   position: relative;
   z-index: 1;
+}
+
+/* double spacing */
+.progression-content p {
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
 }
