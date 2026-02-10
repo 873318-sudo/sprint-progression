@@ -373,7 +373,7 @@ sup { font-size: 0.72em; vertical-align: super; line-height: 0; }
 }
 .abs-img.show { opacity: 1; transform: translateY(0); }
 @media (max-width:900px) {
-  .abs-img { position: relative; left: auto; transform: none; width: 100%; margin: 1rem 0; }
+  .abs-img { position: absolute; left: auto; transform: none; width: 100%; margin: 1rem 0; }
 }
 
 .phase-navigation {
