@@ -55,4 +55,3 @@ const heroObserver = new IntersectionObserver((entries, observer) => {
 }, { threshold: 0.2 });
 
 heroObserver.observe(hero);
-
