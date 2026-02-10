@@ -342,15 +342,15 @@ body {
 
 .abs-img {
   position: absolute;
-  transform: translateX(-50%);
-  width: 10rem;
-  height: 10rem;
+  top: 15rem;
+  left: 15rem;
+  width: 25rem;
+  height: 25rem;
   max-width: 80%;
   object-fit: cover;
   border-radius: 0.5rem;
   box-shadow: 0 2.5rem 5rem rgba(0,0,0,0.18);
   opacity: 0;
-  transition: opacity 1.2s cubic-bezier(0.16,1,0.3,1), transform 1.2s cubic-bezier(0.16,1,0.3,1);
   z-index: 5;
 }
 .abs-img.show { opacity: 1; transform: translateY(0); }
