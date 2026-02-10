@@ -121,15 +121,6 @@ body {
     color: #1a1a1a;
 }
 
-.progression-content p,
-.progression-content .line.paragraph {
-    font-size: 1rem;
-    line-height: 2 !important;
-    margin-bottom: 1lh !important;
-    color: #1a1a1a;
-    font-weight: 400;
-}
-
 /* image properties */
 .hero-visual.first {
   position: relative;
@@ -300,7 +291,7 @@ body {
 .progression-content {
   margin-left: 3.6rem;
   padding: 4rem 6rem;
-  max-width: 66rem;
+  max-width: 56rem;
   position: relative;
   z-index: 10;
 }
@@ -325,7 +316,7 @@ body {
 .progression-section { margin-bottom: 6.5rem; }
 .subsection { margin-bottom: 4rem; }
 
-.progression-content p { margin-bottom: 1.5rem; line-height: 1.7; max-width: 56rem; }
+.progression-content p { margin-bottom: 1lh; line-height: 2; max-width: 56rem; }
 
 sup { font-size: 0.72em; vertical-align: super; line-height: 0; }
 .citation {
@@ -335,16 +326,6 @@ sup { font-size: 0.72em; vertical-align: super; line-height: 0; }
   padding: 0 0.08rem;
 }
 .citation:hover { text-decoration: underline; }
-
-.line {
-  display: block;
-  opacity: 0;
-  transform: translateY(1.25rem);
-  transition: opacity 0.6s cubic-bezier(0.16,1,0.3,1),
-              transform 0.6s cubic-bezier(0.16,1,0.3,1);
-}
-.line.paragraph { margin-bottom: 1.5rem; }
-.line.active { opacity: 1; transform: translateY(0); }
 
 .center-image {
   display: block;
@@ -385,8 +366,8 @@ sup { font-size: 0.72em; vertical-align: super; line-height: 0; }
   background:#7640a0;
   color:white;
   padding: 0.6rem 1rem;
-  border-radius:0.35rem;
-  font-weight:700;
+  border-radius: 0.35rem;
+  font-weight: 700;
   transition: transform .18s ease;
 }
 .phase-navigation a:hover { transform: translateY(-2px); }
