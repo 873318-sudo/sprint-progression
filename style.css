@@ -332,6 +332,11 @@ body {
 
 .prog-image {
   position: relative;
+  padding: 6rem 8rem;
+  gap: 4rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
   top: var(--top);
   width: var(--width);
   height: var(--height);
