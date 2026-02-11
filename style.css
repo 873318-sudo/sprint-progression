@@ -338,6 +338,7 @@ body {
   align-items: flex-start;
   justify-content: flex-start;
   top: var(--top);
+  left: 26rem;
   width: var(--width);
   height: var(--height);
   object-fit: cover;
