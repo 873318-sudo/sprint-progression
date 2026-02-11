@@ -332,7 +332,7 @@ body {
 
 .prog-image {
   position: relative;
-  top: var(--top);
+  top: var(--top) !important;
   width: 12 !important;
   height: 12 !important;
   flex-shrink: 0;
