@@ -336,10 +336,11 @@ body {
   width: 26.25rem;
   height: 26.25rem;
   object-fit: cover;
+  flex-shrink: 0;
   border-radius: 0.5rem;
   box-shadow:
-    0 2.5rem 5rem rgba(0, 0, 0, 0.22),
-    0 0.75rem 1.25rem rgba(0, 0, 0, 0.14);
+    0 2.5rem 5rem rgb(0, 0, 0),
+    0 0.75rem 1.25rem rgb(0, 0, 0);
 }
 
 .phase-navigation {
