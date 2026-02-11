@@ -337,8 +337,6 @@ body {
 
   top: var(--y);
   left: 100%;
-  right: calc(-1 * (100vw - 66rem) / 2);
-  transform: translateX(0);
 
   width: var(--w);
   height: var(--h);
