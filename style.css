@@ -331,18 +331,16 @@ body {
 }
 
 .prog-image {
-  position: relative;
-  padding: 6rem 8rem;
-  gap: 4rem;
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-  top: var(--top);
-  left: 26rem;
-  width: var(--width);
-  height: var(--height);
-  object-fit: cover;
-  border-radius: 0.5rem;
+  position: absolute !important; 
+  display: inline-block !important;
+  align-items: normal !important;
+  justify-content: normal !important;
+  top: var(--top) !important;
+  left: 26rem !important;
+  width: var(--width) !important;
+  height: var(--height) !important;
+  object-fit: cover !important;
+  border-radius: 0.5rem !important;
   box-shadow:
     0 2.5rem 5rem rgba(0, 0, 0, 0.22),
     0 0.75rem 1.25rem rgba(0, 0, 0, 0.14);
